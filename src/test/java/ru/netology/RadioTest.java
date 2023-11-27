@@ -120,7 +120,7 @@ import org.junit.jupiter.api.Test;
 
             Assertions.assertEquals(expected, actual);
         }
-        // установить звук мин+1
+        // установить звук мин-1
         @Test
         public void shouldntSetVolumeLessMin() {
             radio.setCurrentVolume(0);
