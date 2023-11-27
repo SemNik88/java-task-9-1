@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
     public class RadioTest {
         Radio radio = new Radio();
 
-        // установить звук середины диапазона
+        // звук середины диапазона
         @Test
         public void shouldSetVolume() {
             radio.setCurrentVolume(50);
@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
             Assertions.assertEquals(expected,actual);
         }
 
-        // установить макимальный звук
+        // макимальный звук
         @Test
         public void shouldSetVolumeMax() {
             radio.setCurrentVolume(100);
@@ -34,7 +34,7 @@ import org.junit.jupiter.api.Test;
 
             Assertions.assertEquals(expected, actual);
         }
-        // установить звук макс-1
+        // звук макс-1
         @Test
         public void shouldSetVolumeBeforeMax() {
             radio.setCurrentVolume(99);
@@ -43,7 +43,7 @@ import org.junit.jupiter.api.Test;
 
             Assertions.assertEquals(expected, actual);
         }
-        // установить звук мин-1
+        // звук мин-1
         @Test
         public void shouldSetVolumeBeforeMin() {
             radio.setCurrentVolume(-1);
@@ -52,7 +52,7 @@ import org.junit.jupiter.api.Test;
 
             Assertions.assertEquals(expected, actual);
         }
-        // установить звук мин
+        // звук мин
         @Test
         public void shouldSetVolumeMin() {
             radio.setCurrentVolume(0);
@@ -61,7 +61,7 @@ import org.junit.jupiter.api.Test;
 
             Assertions.assertEquals(expected, actual);
         }
-        // установить звук мин+1
+        // звук мин+1
         @Test
         public void shouldSetVolumeOverMin() {
             radio.setCurrentVolume(1);
@@ -70,7 +70,7 @@ import org.junit.jupiter.api.Test;
 
             Assertions.assertEquals(expected, actual);
         }
-        // установить звук на максимальное значение
+        // звук на максимальное значение
         @Test
         public void shouldSetVolumePlusOneToMax() {
             radio.setCurrentVolume(99);
@@ -80,7 +80,7 @@ import org.junit.jupiter.api.Test;
 
             Assertions.assertEquals(expected, actual);
         }
-        // установить звук на макс-1
+        // звук на макс-1
         @Test
         public void shouldSetVolumePlusOneBeforeMax() {
             radio.setCurrentVolume(100);
@@ -100,7 +100,7 @@ import org.junit.jupiter.api.Test;
 
             Assertions.assertEquals(expected, actual);
         }
-        // установить звук мин+1
+        // звук мин+1
         @Test
         public void shouldSetVolumeMinPlusOne() {
             radio.setCurrentVolume(0);
@@ -110,7 +110,7 @@ import org.junit.jupiter.api.Test;
 
             Assertions.assertEquals(expected, actual);
         }
-        // установить звук мин
+        // звук мин
         @Test
         public void shouldSetVolumeToMin() {
             radio.setCurrentVolume(1);
@@ -130,16 +130,16 @@ import org.junit.jupiter.api.Test;
 
             Assertions.assertEquals(expected, actual);
         }
-        // установить станцию середины диапазона
+        // станция середины диапазона
         @Test
         public void shouldSetStation() {
-            radio.setCurrentStation(6);
-            int expected = 6;
+            radio.setCurrentStation(5);
+            int expected = 5;
             int actual = radio.getCurrentStation();
 
             Assertions.assertEquals(expected,actual);
         }
-        // установить макс. станцию
+        // макс. станция
         @Test
         public void shouldSetMaxStation() {
             radio.setCurrentStation(9);
@@ -148,7 +148,7 @@ import org.junit.jupiter.api.Test;
 
             Assertions.assertEquals(expected,actual);
         }
-        // установить станцию макс-1
+        // станция макс-1
         @Test
         public void shouldSetStationMaxMinusOne() {
             radio.setCurrentStation(8);
@@ -157,7 +157,7 @@ import org.junit.jupiter.api.Test;
 
             Assertions.assertEquals(expected,actual);
         }
-        // установить станцию макс+1
+        // станция макс+1
         @Test
         public void shouldntSetStationOverMax() {
             radio.setCurrentStation(10);
@@ -166,7 +166,7 @@ import org.junit.jupiter.api.Test;
 
             Assertions.assertEquals(expected,actual);
         }
-        // установить станцию мин
+        // станция мин
         @Test
         public void shouldSetMinStation() {
             radio.setCurrentStation(0);
@@ -175,7 +175,7 @@ import org.junit.jupiter.api.Test;
 
             Assertions.assertEquals(expected,actual);
         }
-        // установить станцию мин+1
+        // станция мин+1
         @Test
         public void shouldSetStationMinPlusOne() {
             radio.setCurrentStation(1);
