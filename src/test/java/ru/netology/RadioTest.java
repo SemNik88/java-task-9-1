@@ -9,8 +9,8 @@ import org.junit.jupiter.api.Test;
         // установить звук середины диапазона
         @Test
         public void shouldSetVolume() {
-            radio.setCurrentVolume(5);
-            int expected = 5;
+            radio.setCurrentVolume(50);
+            int expected = 50;
             int actual = radio.getCurrentVolume();
 
             Assertions.assertEquals(expected,actual);
@@ -19,8 +19,8 @@ import org.junit.jupiter.api.Test;
         // установить макимальный звук
         @Test
         public void shouldSetVolumeMax() {
-            radio.setCurrentVolume(10);
-            int expected = 10;
+            radio.setCurrentVolume(100);
+            int expected = 100;
             int actual = radio.getCurrentVolume();
 
             Assertions.assertEquals(expected, actual);
@@ -28,7 +28,7 @@ import org.junit.jupiter.api.Test;
         // не устанавливать звук выше максимального
         @Test
         public void shouldntSetVolumeOverMax() {
-            radio.setCurrentVolume(11);
+            radio.setCurrentVolume(101);
             int expected = 0;
             int actual = radio.getCurrentVolume();
 
@@ -37,8 +37,8 @@ import org.junit.jupiter.api.Test;
         // установить звук макс-1
         @Test
         public void shouldSetVolumeBeforeMax() {
-            radio.setCurrentVolume(9);
-            int expected = 9;
+            radio.setCurrentVolume(99);
+            int expected = 99;
             int actual = radio.getCurrentVolume();
 
             Assertions.assertEquals(expected, actual);
@@ -73,9 +73,9 @@ import org.junit.jupiter.api.Test;
         // установить звук на максимальное значение
         @Test
         public void shouldSetVolumePlusOneToMax() {
-            radio.setCurrentVolume(9);
+            radio.setCurrentVolume(99);
             radio.increaseVolume();
-            int expected = 10;
+            int expected = 100;
             int actual = radio.getCurrentVolume();
 
             Assertions.assertEquals(expected, actual);
@@ -83,9 +83,9 @@ import org.junit.jupiter.api.Test;
         // установить звук на макс-1
         @Test
         public void shouldSetVolumePlusOneBeforeMax() {
-            radio.setCurrentVolume(8);
+            radio.setCurrentVolume(100);
             radio.increaseVolume();
-            int expected = 9;
+            int expected = 100;
             int actual = radio.getCurrentVolume();
 
             Assertions.assertEquals(expected, actual);
@@ -93,9 +93,9 @@ import org.junit.jupiter.api.Test;
         // не устанавливать звук выше макс
         @Test
         public void shouldntSetVolumePlusOneOverMax() {
-            radio.setCurrentVolume(10);
+            radio.setCurrentVolume(100);
             radio.increaseVolume();
-            int expected = 10;
+            int expected = 100;
             int actual = radio.getCurrentVolume();
 
             Assertions.assertEquals(expected, actual);
