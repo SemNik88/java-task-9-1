@@ -123,7 +123,7 @@ import org.junit.jupiter.api.Test;
         // установить звук мин-1
         @Test
         public void shouldntSetVolumeLessMin() {
-            radio.setCurrentVolume(0);
+            radio.setCurrentVolume(-1);
             radio.decreaseVolume();
             int expected = 0;
             int actual = radio.getCurrentVolume();
