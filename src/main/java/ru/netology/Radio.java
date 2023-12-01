@@ -3,11 +3,11 @@ package ru.netology;
 public class Radio {
     private int currentVolume; // поле сделано приватным
     private int currentStation; // поле сделано приватным
-    private final int maxStation; // поле для хранения максимального количества станций
+    private final int stationCount; // поле для хранения количества станций
 
     // конструктор с параметром для задания количества станций
-    public Radio(int maxStation) {
-        this.maxStation = maxStation;
+    public Radio(int stationCount) {
+        this.stationCount = stationCount;
     }
 
     // конструктор без параметров для задания количества станций по умолчанию
@@ -34,7 +34,7 @@ public class Radio {
     }
 
     public void setCurrentStation(int newCurrentStation) {
-        if (newCurrentStation >= maxStation) {
+        if (newCurrentStation >= stationCount) {
             return;
         }
         if (newCurrentStation < 0) {
@@ -45,29 +45,29 @@ public class Radio {
 
     public void increaseVolume() {
         if (currentVolume < 100) {
-            currentVolume = currentVolume + 1;
+            currentVolume++; // увеличиваем громкость на 1
         }
     }
 
     public void decreaseVolume() {
         if (currentVolume > 0) {
-            currentVolume = currentVolume - 1;
+            currentVolume--; // уменьшаем громкость на 1
         }
     }
 
     public void next() {
-        if (currentStation < maxStation - 1) {
-            currentStation = currentStation + 1;
+        if (currentStation < stationCount - 1) {
+            currentStation++; // переключаемся на следующую станцию
         } else {
-            currentStation = 0;
+            currentStation = 0; // возвращаемся к первой станции
         }
     }
 
     public void prev() {
         if (currentStation > 0) {
-            currentStation = currentStation - 1;
+            currentStation--; // переключаемся на предыдущую станцию
         } else {
-            currentStation = maxStation - 1;
+            currentStation = stationCount - 1; // переходим к последней станции
         }
     }
 }
