@@ -3,7 +3,7 @@ package ru.netology;
 public class Radio {
     private int currentVolume; // поле сделано приватным
     private int currentStation; // поле сделано приватным
-    private final int maxStation; // поле для хранения максимального номера станции
+    private final int maxStation; // поле для хранения максимального количества станций
 
     // конструктор с параметром для задания количества станций
     public Radio(int maxStation) {
